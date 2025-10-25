@@ -1,11 +1,11 @@
 import fs from 'fs';
-import сrypto from 'node:crypto';
+import crypto from 'node:crypto';
 import process from 'process';
 
 const calculateHash = async () => {
   const fileUrl = new URL("./files/fileToCalculateHashFor.txt", import.meta.url);
   const input = fs.createReadStream(fileUrl);
-  const hash = сrypto.createHash('sha256');
+  const hash = crypto.createHash('sha256');
 
   hash.setEncoding('hex');
   input.pipe(hash).pipe(process.stdout);
