@@ -1,5 +1,12 @@
+import fs from 'fs';
+import process from 'process';
+
 const read = async () => {
-  // Write your code here
+  const fileUrl = new URL("./files/fileToRead.txt", import.meta.url);
+  const input = fs.createReadStream(fileUrl);
+
+  input.pipe(process.stdout);
+  input.on('end', () => process.stdout.write('\n'));
 };
 
 await read();
