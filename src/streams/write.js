@@ -1,5 +1,4 @@
 import fs from 'fs';
-import process from 'process';
 
 const write = async () => {
   const fileUrl = new URL("./files/fileToWrite.txt", import.meta.url);

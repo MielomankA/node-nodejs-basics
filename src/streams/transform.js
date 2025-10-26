@@ -1,4 +1,3 @@
-import process from 'process';
 import { Transform } from 'node:stream';
 
 const transform = async () => {

@@ -1,5 +1,4 @@
 import fs from 'fs';
-import process from 'process';
 
 const read = async () => {
   const fileUrl = new URL("./files/fileToRead.txt", import.meta.url);

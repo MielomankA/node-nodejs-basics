@@ -1,6 +1,5 @@
 import fs from 'fs';
 import crypto from 'node:crypto';
-import process from 'process';
 
 const calculateHash = async () => {
   const fileUrl = new URL("./files/fileToCalculateHashFor.txt", import.meta.url);
